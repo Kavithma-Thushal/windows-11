@@ -10,160 +10,32 @@
 
 <body>
 
-<!-- ================= Desktop ================= -->
-<div class="container-fluid vh-100 text-white"
-     style="background-image:url('assets/images/wallpaper.png'); background-size: cover; background-position: center center;">
-    <div class="row pt-3 ps-1">
-        <div class="col-auto d-flex flex-column gap-2">
+<!-- Desktop -->
+<div id="desktop"></div>
 
-            <div class="text-center app-icon" data-app="pc">
-                <i class="bi bi-pc-display fs-1 text-primary"></i>
-                <div>This PC</div>
-            </div>
+<!-- Start Menu -->
+<div id="startMenuContainer"></div>
 
-            <div class="text-center app-icon" data-app="explorer">
-                <i class="bi bi-folder-fill fs-1 text-warning"></i>
-                <div>File Explorer</div>
-            </div>
+<!-- Taskbar -->
+<div id="taskbar"></div>
 
-            <div class="text-center app-icon" data-app="recycle">
-                <i class="bi bi-trash-fill fs-1"></i>
-                <div>Recycle Bin</div>
-            </div>
-
-            <div class="text-center app-icon" data-app="browser">
-                <i class="bi bi-browser-edge fs-1 text-info"></i>
-                <div>Browser</div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<!-- ================= Start Menu ================= -->
-<div id="startMenu" class="position-fixed bottom-0 start-0 bg-light shadow rounded-3 p-4 d-none mb-5 w-25 ms-1">
-    <div class="row text-center g-3">
-
-        <div class="col-4 app-launch" data-app="pc">
-            <i class="bi bi-pc-display fs-2 text-primary"></i>
-            <div>This PC</div>
-        </div>
-
-        <div class="col-4 app-launch" data-app="explorer">
-            <i class="bi bi-folder fs-2 text-warning"></i>
-            <div>File Explorer</div>
-        </div>
-
-        <div class="col-4 app-launch" data-app="browser">
-            <i class="bi bi-browser-edge fs-2 text-info"></i>
-            <div>Browser</div>
-        </div>
-
-    </div>
-
-    <hr>
-
-    <div class="d-flex justify-content-end gap-2">
-        <button class="btn btn-sm btn-outline-secondary">Restart</button>
-        <button class="btn btn-sm btn-outline-danger">Shut down</button>
-    </div>
-</div>
-
-<!-- ================= Taskbar ================= -->
-<div class="position-fixed bottom-0 w-100 bg-dark text-white">
-    <div class="d-flex align-items-center justify-content-between px-3">
-
-        <div class="d-flex gap-4 py-2">
-            <i class="bi bi-windows fs-4" id="startBtn"></i>
-            <i class="bi bi-search fs-4"></i>
-            <i class="bi bi-folder fs-4 task-app" data-app="explorer"></i>
-        </div>
-
-        <div id="clock" class="small"></div>
-    </div>
-</div>
-
-<!-- ================= This PC ================= -->
-<div id="pc" class="window position-absolute bg-white rounded shadow d-none" style="width:600px;top:250px;left:450px">
-    <div class="d-flex justify-content-between align-items-center bg-light px-2 py-1">
-        <strong>This PC</strong>
-        <div>
-            <button class="btn btn-sm btn-secondary minimize">—</button>
-            <button class="btn btn-sm btn-danger close">✕</button>
-        </div>
-    </div>
-    <div class="p-3">
-        <div class="mb-2">Local Disk (C:)</div>
-        <div class="progress mb-3">
-            <div class="progress-bar w-75"></div>
-        </div>
-        <div>Local Disk (D:)</div>
-        <div class="progress">
-            <div class="progress-bar w-50"></div>
-        </div>
-    </div>
-</div>
-
-<!-- ================= File Explorer ================= -->
-<div id="explorer" class="window position-absolute bg-white rounded shadow d-none"
-     style="width:600px; top:250px; left:450px">
-    <div class="d-flex justify-content-between align-items-center bg-light px-2 py-1">
-        <strong>File Explorer</strong>
-        <div>
-            <button class="btn btn-sm btn-secondary minimize">—</button>
-            <button class="btn btn-sm btn-danger close">✕</button>
-        </div>
-    </div>
-    <div class="p-3">
-        <ul class="list-group">
-            <li class="list-group-item">Documents</li>
-            <li class="list-group-item">Downloads</li>
-            <li class="list-group-item">Pictures</li>
-        </ul>
-    </div>
-</div>
-
-<!-- ================= Recycle Bin ================= -->
-<div id="recycle" class="window position-absolute bg-white rounded shadow d-none"
-     style="width:600px; top:250px; left:450px">
-    <div class="d-flex justify-content-between align-items-center bg-light px-2 py-1">
-        <strong>Recycle Bin</strong>
-        <div>
-            <button class="btn btn-sm btn-secondary minimize">—</button>
-            <button class="btn btn-sm btn-danger close">✕</button>
-        </div>
-    </div>
-
-    <div class="p-3">
-        <ul class="list-group mb-2">
-            <li class="list-group-item">demo.txt</li>
-            <li class="list-group-item">demo2.txt</li>
-        </ul>
-        <div class="d-flex justify-content-end">
-            <button class="btn btn-sm btn-danger">Empty Bin</button>
-        </div>
-    </div>
-</div>
-
-<!-- ================= Browser ================= -->
-<div class="window position-absolute bg-white rounded shadow d-none" id="browser"
-     style="width:800px; top:100px; left:400px">
-    <div class="d-flex justify-content-between align-items-center bg-light px-2 py-1">
-        <strong>Browser</strong>
-        <div>
-            <button class="btn btn-sm btn-secondary minimize">—</button>
-            <button class="btn btn-sm btn-danger close">✕</button>
-        </div>
-    </div>
-    <div class="p-2">
-        <input class="form-control mb-2" value="https://example.com">
-        <iframe src="https://example.com" class="w-100" style="height:350px"></iframe>
-    </div>
-</div>
+<!-- Windows Apps -->
+<div id="windows"></div>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"></script>
-<script src="assets/scripts/open-close.js"></script>
+<script src="assets/scripts/app.js"></script>
+<script>
+    $("#desktop").load("components/desktop.html");
+    $("#startMenuContainer").load("components/startMenu.html");
+    $("#taskbar").load("components/taskbar.html");
+
+    $("#windows").load("components/thisPC.html", function () {
+        $("#windows").append($("<div>").load("components/fileExplorer.html"));
+        $("#windows").append($("<div>").load("components/recycleBin.html"));
+        $("#windows").append($("<div>").load("components/browser.html"));
+    });
+</script>
 
 </body>
 </html>
