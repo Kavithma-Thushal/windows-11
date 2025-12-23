@@ -9,10 +9,29 @@
     </div>
 
     <div class="p-2">
-        <input class="form-control mb-2" value="https://example.com">
+        <div class="d-flex mb-2 gap-2">
+            <input id="url" class="form-control flex-grow-1" type="text" placeholder="https://example.com">
+            <button id="search" class="btn btn-primary">Search</button>
+        </div>
+
         <div class="ratio ratio-16x9">
-            <iframe src="https://example.com"></iframe>
+            <iframe id="iframe" src="https://example.com"></iframe>
         </div>
     </div>
 
 </div>
+
+<script>
+    function loadBrowserURL() {
+        let url = document.getElementById('url').value;
+        if (!/^https?:\/\//i.test(url)) {
+            url = 'https://' + url;
+        }
+        document.getElementById('iframe').src = url;
+    }
+
+    document.getElementById('search').addEventListener('click', loadBrowserURL);
+    document.getElementById('url').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') loadBrowserURL();
+    });
+</script>
