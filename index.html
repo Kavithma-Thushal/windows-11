@@ -12,12 +12,12 @@
 
 <!-- ================= Desktop ================= -->
 <div class="container-fluid vh-100 text-white"
-     style="background-image:url('https://4kwallpapers.com/images/walls/thumbs_3t/5630.jpg'); background-size:cover;">
+     style="background-image:url('wallpaper.png'); background-size:cover;">
     <div class="row pt-4 ps-2">
         <div class="col-auto d-flex flex-column gap-4">
 
             <div class="text-center app-icon" data-app="pc">
-                <i class="bi bi-pc-display fs-1"></i>
+                <i class="bi bi-pc-display fs-1 text-primary"></i>
                 <div>This PC</div>
             </div>
 
@@ -41,9 +41,13 @@
 </div>
 
 <!-- ================= Start Menu ================= -->
-<div id="startMenu" class="position-fixed bottom-0 start-50 translate-middle-x bg-light shadow rounded-4 p-4 d-none"
-     style="width:360px;margin-bottom:50px">
+<div id="startMenu" class="position-fixed bottom-0 start-0 bg-light shadow rounded-3 p-4 d-none mb-5 w-25 ms-1">
     <div class="row text-center g-3">
+
+        <div class="col-4 app-launch" data-app="pc">
+            <i class="bi bi-pc-display fs-2 text-primary"></i>
+            <div>This PC</div>
+        </div>
 
         <div class="col-4 app-launch" data-app="explorer">
             <i class="bi bi-folder fs-2 text-warning"></i>
@@ -69,7 +73,7 @@
 <div class="position-fixed bottom-0 w-100 bg-dark text-white">
     <div class="d-flex align-items-center justify-content-between px-3">
 
-        <div class="d-flex gap-4 mx-auto py-2">
+        <div class="d-flex gap-4 py-2">
             <i class="bi bi-windows fs-4" id="startBtn"></i>
             <i class="bi bi-search fs-4"></i>
             <i class="bi bi-folder fs-4 task-app" data-app="explorer"></i>
@@ -129,12 +133,15 @@
             <button class="btn btn-sm btn-danger close">✕</button>
         </div>
     </div>
+
     <div class="p-3">
         <ul class="list-group mb-2">
             <li class="list-group-item">demo.txt</li>
             <li class="list-group-item">demo2.txt</li>
         </ul>
-        <button class="btn btn-sm btn-danger">Empty Bin</button>
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-sm btn-danger">Empty Bin</button>
+        </div>
     </div>
 </div>
 
@@ -164,7 +171,18 @@
         $("#" + id).removeClass("d-none").css("z-index", 10);
     }
 
-    $(".app-icon, .app-launch, .task-app").on("dblclick click", function () {
+    $(".app-icon").on("dblclick", function (e) {
+        e.stopPropagation();
+        openApp($(this).data("app"));
+    });
+
+    $(".app-launch").on("click", function (e) {
+        e.stopPropagation();
+        openApp($(this).data("app"));
+        $("#startMenu").addClass("d-none");
+    });
+
+    $(".task-app").on("click", function () {
         openApp($(this).data("app"));
     });
 
@@ -180,8 +198,15 @@
         $("#startMenu").toggleClass("d-none");
     });
 
+    $(document).click(function (e) {
+        if (!$(e.target).closest("#startMenu, #startBtn").length) {
+            $("#startMenu").addClass("d-none");
+        }
+    });
+
     function clock() {
-        $("#clock").text(new Date().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'}));
+        let time = new Date().toLocaleTimeString([], {hour: 'numeric', minute: '2-digit', hour12: true});
+        $("#clock").text(time.toUpperCase());
     }
 
     setInterval(clock, 1000);
