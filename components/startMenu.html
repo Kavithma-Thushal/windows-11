@@ -1,27 +1,29 @@
-<div id="startMenu" class="position-fixed bottom-0 start-0 bg-light shadow rounded-3 p-4 d-none mb-5 w-25 ms-1">
+<div id="startMenu"
+     class="position-fixed bottom-0 start-0 bg-light shadow rounded-3 p-3 d-none w-25 h-75 d-flex flex-column justify-content-between">
     <div class="row text-center g-3">
 
-        <div class="col-4 app-launch" data-app="pc">
+        <div class="col app-launch mb-3" data-app="pc">
             <i class="bi bi-pc-display fs-2 text-primary"></i>
             <div>This PC</div>
         </div>
 
-        <div class="col-4 app-launch" data-app="explorer">
+        <div class="col app-launch mb-3" data-app="explorer">
             <i class="bi bi-folder fs-2 text-warning"></i>
             <div>File Explorer</div>
         </div>
 
-        <div class="col-4 app-launch" data-app="browser">
+        <div class="col app-launch mb-3" data-app="browser">
             <i class="bi bi-browser-edge fs-2 text-info"></i>
             <div>Browser</div>
         </div>
 
     </div>
 
-    <hr>
-
-    <div class="d-flex justify-content-end gap-2">
-        <button class="btn btn-sm btn-outline-secondary">Restart</button>
-        <button class="btn btn-sm btn-outline-danger">Shut down</button>
+    <div class="mb-5">
+        <hr>
+        <div class="d-flex justify-content-end gap-2">
+            <button class="btn btn-sm btn-outline-secondary">Restart</button>
+            <button class="btn btn-sm btn-outline-danger">Shut down</button>
+        </div>
     </div>
 </div>
