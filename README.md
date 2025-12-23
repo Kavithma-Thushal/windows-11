@@ -1,39 +1,65 @@
-# ⭐ Dinesh Tours & Travels ⭐
+# ⭐ Windows 11 UI – Web ⭐
 
-Welcome to **Dinesh Tours & Travels**, a modern and user-friendly travel booking website built with React and Tailwind
-CSS. This project is designed to help users explore destinations, make bookings easily, and manage travel plans — all in
-one place
+Experience a fully functional Windows 11 directly in your browser. This project replicates core Windows 11 UI elements
+and interactions, including a dynamic desktop, taskbar, start menu, draggable app windows, and basic applications like
+File Explorer, This PC, Recycle Bin, and a simple browser. It’s designed as a learning tool and a showcase of web-based
+UI emulation. Explore the immersive Windows 11 experience, interact with apps, and see how desktop functionalities can
+be recreated entirely in the browser.
 
-## 🛠️ Tech Stack
+## 🛠️ Technologies
 
-✅ React<br/>
-✅ Tailwind CSS<br/>
-✅ Vite<br/>
+✅ **HTML**<br/>
+✅ **Bootstrap**<br/>
+✅ **JQuery**<br/>
 
 ## 🚀 Features
 
-✅ User-friendly travel booking interface<br/>
-✅ Explore tour packages and destinations<br/>
-✅ Manage bookings and inquiries<br/>
-✅ Responsive design for all devices<br/>
-✅ Fast performance powered by Vite<br/>
+✅ **Desktop UI**: Full-screen background, left-aligned icons, draggable apps.<br/>
+✅ **Taskbar**: Centered icons, start menu, live clock, active app highlighting.<br/>
+✅ **Start Menu**: Windows 11 style popup with app grid and power buttons.<br/>
+✅ **Draggable App Windows**: Rounded corners, minimize, maximize, close, and focus handling.<br/>
+✅ **File Explorer**: Sidebar, breadcrumb header, folder simulation, dynamic file listing.<br/>
+✅ **This PC**: Drive simulation with fake storage bars.<br/>
+✅ **Recycle Bin**: Delete, restore, and empty files functionality.<br/>
+✅ **Browser**: Simple address bar with iframe-based page loading.<br/>
 
-## ▶️ How to Run the Project
+## 📸 Screenshots
 
-### ⚛️ Start
+### Desktop
 
-1. Install dependencies - `npm install`
-2. Start the development server - `npm run dev`
+<img src="src/assets/images/projects/Windows11UI/Desktop.png">
 
-### ❄️ Deploy
+### Start Menu
 
-1. Remove `dist` folder from locally
-2. Build project - `npm run build`
-3. Deploy project - `npm run deploy`
+<img src="src/assets/images/projects/Windows11UI/StartMenu.png">
+
+### File Explorer
+
+<img src="src/assets/images/projects/Windows11UI/FileExplorer.png">
+
+### This PC
+
+<img src="src/assets/images/projects/Windows11UI/ThisPC.png">
+
+### Recycle Bin
+
+<img src="src/assets/images/projects/Windows11UI/RecycleBin.png">
+
+### Browser
+
+<img src="src/assets/images/projects/Windows11UI/Browser.png">
+
+### Taskbar
+
+<img src="src/assets/images/projects/Windows11UI/Taskbar.png">
+
+## 📝 Version
+
+**1.0.0**
 
 ## 📬 Get in Touch
 
-Got any bugs, issues, or need help understanding the code? Feel free to reach out!
+Encountered any issues, or want to learn more about the project? Reach out directly:
 
 📧 [kavithmathushal9007@gmail.com](mailto:kavithmathushal9007@gmail.com)
 
@@ -42,5 +68,7 @@ Got any bugs, issues, or need help understanding the code? Feel free to reach ou
 #### This project is licensed under the [GNU License](LICENSE)
 
 #### © 2025 All Rights Reserved | Designed by [Kavithma Thushal](https://github.com/Kavithma-Thushal)
+
+#### ‍⚠️👷‍♂️ This Web Project is currently Under Development. Stay tuned for updates! 👷‍♂️⚠️
 
 </div>
