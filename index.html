@@ -2,29 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Windows 11 UI – Web</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- jQuery UI -->
-    <link href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css" rel="stylesheet">
+    <title>Windows 11</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 
-<body class="vh-100 overflow-hidden bg-dark">
+<body>
 
-<!-- ================= DESKTOP ================= -->
+<!-- ================= Desktop ================= -->
 <div class="container-fluid vh-100 text-white"
-     style="background-image:url('https://4kwallpapers.com/images/walls/thumbs_3t/5630.jpg');background-size:cover;">
-
-    <div class="row pt-4 ps-3">
+     style="background-image:url('https://4kwallpapers.com/images/walls/thumbs_3t/5630.jpg'); background-size:cover;">
+    <div class="row pt-4 ps-2">
         <div class="col-auto d-flex flex-column gap-4">
 
-            <div class="text-center app-icon" data-app="thispc">
+            <div class="text-center app-icon" data-app="pc">
                 <i class="bi bi-pc-display fs-1"></i>
                 <div>This PC</div>
             </div>
@@ -48,41 +40,34 @@
     </div>
 </div>
 
-<!-- ================= START MENU ================= -->
-<div id="startMenu"
-     class="position-fixed bottom-0 start-50 translate-middle-x bg-light shadow rounded-4 p-4 d-none"
-     style="width:360px;margin-bottom:70px">
-
-    <div class="row text-center g-3">
-        <div class="col-4 app-launch" data-app="explorer">
-            <i class="bi bi-folder fs-2 text-warning"></i>
-            <div>Explorer</div>
-        </div>
-        <div class="col-4 app-launch" data-app="browser">
-            <i class="bi bi-browser-edge fs-2 text-info"></i>
-            <div>Browser</div>
-        </div>
-        <div class="col-4 app-launch" data-app="thispc">
-            <i class="bi bi-pc fs-2"></i>
-            <div>This PC</div>
+<!-- ================= This PC ================= -->
+<div id="pc" class="window position-absolute bg-white rounded shadow d-none" style="width:600px;top:250px;left:450px">
+    <div class="d-flex justify-content-between align-items-center bg-light px-2 py-1">
+        <strong>This PC</strong>
+        <div>
+            <button class="btn btn-sm btn-secondary minimize">—</button>
+            <button class="btn btn-sm btn-danger close">✕</button>
         </div>
     </div>
-
-    <hr>
-
-    <div class="d-flex justify-content-end gap-2">
-        <button class="btn btn-sm btn-outline-secondary">Restart</button>
-        <button class="btn btn-sm btn-outline-danger">Shut down</button>
+    <div class="p-3">
+        <div class="mb-2">Local Disk (C:)</div>
+        <div class="progress mb-3">
+            <div class="progress-bar w-75"></div>
+        </div>
+        <div>Local Disk (D:)</div>
+        <div class="progress">
+            <div class="progress-bar w-50"></div>
+        </div>
     </div>
 </div>
 
-<!-- ================= WINDOWS ================= -->
-<div class="window position-absolute bg-white rounded shadow d-none" id="explorer"
-     style="width:600px;top:100px;left:200px">
+<!-- ================= File Explorer ================= -->
+<div id="explorer" class="window position-absolute bg-white rounded shadow d-none"
+     style="width:600px; top:250px; left:450px">
     <div class="d-flex justify-content-between align-items-center bg-light px-2 py-1">
         <strong>File Explorer</strong>
         <div>
-            <button class="btn btn-sm btn-warning minimize">—</button>
+            <button class="btn btn-sm btn-secondary minimize">—</button>
             <button class="btn btn-sm btn-danger close">✕</button>
         </div>
     </div>
@@ -95,49 +80,32 @@
     </div>
 </div>
 
-<div class="window position-absolute bg-white rounded shadow d-none" id="thispc"
-     style="width:500px;top:120px;left:250px">
-    <div class="d-flex justify-content-between align-items-center bg-light px-2 py-1">
-        <strong>This PC</strong>
-        <div>
-            <button class="btn btn-sm btn-warning minimize">—</button>
-            <button class="btn btn-sm btn-danger close">✕</button>
-        </div>
-    </div>
-    <div class="p-3">
-        <div class="mb-2">Local Disk (C:)</div>
-        <div class="progress mb-3">
-            <div class="progress-bar w-75"></div>
-        </div>
-        <div>Local Disk (D:)</div>
-        <div class="progress">
-            <div class="progress-bar w-50 bg-success"></div>
-        </div>
-    </div>
-</div>
-
-<div class="window position-absolute bg-white rounded shadow d-none" id="recycle"
-     style="width:400px;top:140px;left:300px">
+<!-- ================= Recycle Bin ================= -->
+<div id="recycle" class="window position-absolute bg-white rounded shadow d-none"
+     style="width:600px; top:250px; left:450px">
     <div class="d-flex justify-content-between align-items-center bg-light px-2 py-1">
         <strong>Recycle Bin</strong>
         <div>
+            <button class="btn btn-sm btn-secondary minimize">—</button>
             <button class="btn btn-sm btn-danger close">✕</button>
         </div>
     </div>
     <div class="p-3">
         <ul class="list-group mb-2">
-            <li class="list-group-item">old_file.txt</li>
+            <li class="list-group-item">demo.txt</li>
+            <li class="list-group-item">demo2.txt</li>
         </ul>
         <button class="btn btn-sm btn-danger">Empty Bin</button>
     </div>
 </div>
 
+<!-- ================= Browser ================= -->
 <div class="window position-absolute bg-white rounded shadow d-none" id="browser"
-     style="width:700px;top:80px;left:180px">
+     style="width:800px; top:100px; left:400px">
     <div class="d-flex justify-content-between align-items-center bg-light px-2 py-1">
         <strong>Browser</strong>
         <div>
-            <button class="btn btn-sm btn-warning minimize">—</button>
+            <button class="btn btn-sm btn-secondary minimize">—</button>
             <button class="btn btn-sm btn-danger close">✕</button>
         </div>
     </div>
@@ -147,7 +115,7 @@
     </div>
 </div>
 
-<!-- ================= TASKBAR ================= -->
+<!-- ================= Taskbar ================= -->
 <div class="position-fixed bottom-0 w-100 bg-dark text-white">
     <div class="d-flex align-items-center justify-content-between px-3">
 
@@ -155,24 +123,45 @@
             <i class="bi bi-windows fs-4" id="startBtn"></i>
             <i class="bi bi-search fs-4"></i>
             <i class="bi bi-folder fs-4 task-app" data-app="explorer"></i>
-            <i class="bi bi-browser-edge fs-4 task-app" data-app="browser"></i>
         </div>
 
         <div id="clock" class="small"></div>
     </div>
 </div>
 
-<!-- ================= SCRIPTS ================= -->
+<!-- ================= Start Menu ================= -->
+<div id="startMenu" class="position-fixed bottom-0 start-50 translate-middle-x bg-light shadow rounded-4 p-4 d-none"
+     style="width:360px;margin-bottom:50px">
+    <div class="row text-center g-3">
+
+        <div class="col-4 app-launch" data-app="explorer">
+            <i class="bi bi-folder fs-2 text-warning"></i>
+            <div>File Explorer</div>
+        </div>
+
+        <div class="col-4 app-launch" data-app="browser">
+            <i class="bi bi-browser-edge fs-2 text-info"></i>
+            <div>Browser</div>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="d-flex justify-content-end gap-2">
+        <button class="btn btn-sm btn-outline-secondary">Restart</button>
+        <button class="btn btn-sm btn-outline-danger">Shut down</button>
+    </div>
+</div>
+
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 <script>
-    $(".window").draggable({ handle: ".bg-light" });
+    $(".window").draggable({handle: ".bg-light"});
 
     function openApp(id) {
-        $(".window").css("z-index",1);
-        $("#" + id).removeClass("d-none").css("z-index",10);
+        $(".window").css("z-index", 1);
+        $("#" + id).removeClass("d-none").css("z-index", 10);
     }
 
     $(".app-icon, .app-launch, .task-app").on("dblclick click", function () {
@@ -192,8 +181,9 @@
     });
 
     function clock() {
-        $("#clock").text(new Date().toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'}));
+        $("#clock").text(new Date().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'}));
     }
+
     setInterval(clock, 1000);
     clock();
 </script>
