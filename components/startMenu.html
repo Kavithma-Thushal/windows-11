@@ -1,29 +1,46 @@
 <div id="startMenu"
      class="position-fixed bottom-0 start-0 bg-light shadow rounded-3 p-3 d-none w-25 h-75 d-flex flex-column justify-content-between">
-    <div class="row text-center g-3">
 
-        <div class="col app-launch mb-3" data-app="pc">
-            <i class="bi bi-pc-display fs-2 text-primary"></i>
-            <div>This PC</div>
-        </div>
-
-        <div class="col app-launch mb-3" data-app="explorer">
+    <div class="row text-center g-2">
+        <div class="col app-launch" data-app="explorer">
             <i class="bi bi-folder fs-2 text-warning"></i>
             <div>File Explorer</div>
         </div>
 
-        <div class="col app-launch mb-3" data-app="browser">
+        <div class="col app-launch" data-app="browser">
             <i class="bi bi-browser-edge fs-2 text-info"></i>
             <div>Browser</div>
         </div>
 
+        <div class="col app-launch" data-app="settings">
+            <i class="bi bi-gear fs-2 text-secondary"></i>
+            <div>Settings</div>
+        </div>
     </div>
 
-    <div class="mb-5">
-        <hr>
+    <div class="row text-center g-2 mt-3">
+        <div class="col app-launch" data-app="music">
+            <i class="bi bi-music-note-beamed fs-2 text-danger"></i>
+            <div>Music</div>
+        </div>
+
+        <div class="col app-launch" data-app="video">
+            <i class="bi bi-camera-video fs-2 text-primary"></i>
+            <div>Video</div>
+        </div>
+
+        <div class="col app-launch" data-app="documents">
+            <i class="bi bi-file-earmark-text fs-2 text-success"></i>
+            <div>Documents</div>
+        </div>
+    </div>
+
+    <div class="mt-auto">
+        <hr class="my-2">
         <div class="d-flex justify-content-end gap-2">
             <button class="btn btn-sm btn-outline-secondary">Restart</button>
             <button class="btn btn-sm btn-outline-danger">Shut down</button>
         </div>
     </div>
+
 </div>
