@@ -12,7 +12,7 @@
 
 <!-- ================= Desktop ================= -->
 <div class="container-fluid vh-100 text-white"
-     style="background-image:url('wallpaper.png'); background-size: cover; background-position: center center;">
+     style="background-image:url('assets/images/wallpaper.png'); background-size: cover; background-position: center center;">
     <div class="row pt-3 ps-1">
         <div class="col-auto d-flex flex-column gap-2">
 
@@ -163,55 +163,7 @@
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"></script>
-<script>
-    $(".window").draggable({handle: ".bg-light"});
-
-    function openApp(id) {
-        $(".window").css("z-index", 1);
-        $("#" + id).removeClass("d-none").css("z-index", 10);
-    }
-
-    $(".app-icon").on("dblclick", function (e) {
-        e.stopPropagation();
-        openApp($(this).data("app"));
-    });
-
-    $(".app-launch").on("click", function (e) {
-        e.stopPropagation();
-        openApp($(this).data("app"));
-        $("#startMenu").addClass("d-none");
-    });
-
-    $(".task-app").on("click", function () {
-        openApp($(this).data("app"));
-    });
-
-    $(".close").click(function () {
-        $(this).closest(".window").addClass("d-none");
-    });
-
-    $(".minimize").click(function () {
-        $(this).closest(".window").addClass("d-none");
-    });
-
-    $("#startBtn").click(function () {
-        $("#startMenu").toggleClass("d-none");
-    });
-
-    $(document).click(function (e) {
-        if (!$(e.target).closest("#startMenu, #startBtn").length) {
-            $("#startMenu").addClass("d-none");
-        }
-    });
-
-    function clock() {
-        let time = new Date().toLocaleTimeString([], {hour: 'numeric', minute: '2-digit', hour12: true});
-        $("#clock").text(time.toUpperCase());
-    }
-
-    setInterval(clock, 1000);
-    clock();
-</script>
+<script src="assets/scripts/open-close.js"></script>
 
 </body>
 </html>
