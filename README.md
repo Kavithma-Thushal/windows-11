@@ -31,6 +31,26 @@ functionalities can be recreated entirely in the browser.
 
 <img src="ss/desktop.png">
 
+### Start Menu
+
+<img src="ss/start-menu.png">
+
+### This PC
+
+<img src="ss/this-pc.png">
+
+### File Explorer
+
+<img src="ss/file-explorer.png">
+
+### Recycle Bin
+
+<img src="ss/recycle-bin.png">
+
+### Browser
+
+<img src="ss/browser.png">
+
 ## 📝 Version
 
 **1.0.0**
