@@ -1,4 +1,4 @@
-# ⭐ Windows 11 UI – Web ⭐
+# ⭐ Windows 11 UI ⭐
 
 Experience a fully functional Windows 11 directly in your browser. This project replicates core Windows 11 UI elements
 and interactions, including a dynamic desktop, taskbar, start menu, draggable app windows, and basic applications like
@@ -27,31 +27,7 @@ be recreated entirely in the browser.
 
 ### Desktop
 
-<img src="src/assets/images/projects/Windows11UI/Desktop.png">
-
-### Start Menu
-
-<img src="src/assets/images/projects/Windows11UI/StartMenu.png">
-
-### File Explorer
-
-<img src="src/assets/images/projects/Windows11UI/FileExplorer.png">
-
-### This PC
-
-<img src="src/assets/images/projects/Windows11UI/ThisPC.png">
-
-### Recycle Bin
-
-<img src="src/assets/images/projects/Windows11UI/RecycleBin.png">
-
-### Browser
-
-<img src="src/assets/images/projects/Windows11UI/Browser.png">
-
-### Taskbar
-
-<img src="src/assets/images/projects/Windows11UI/Taskbar.png">
+<img src="ss/desktop.png">
 
 ## 📝 Version
 
