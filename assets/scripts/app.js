@@ -17,8 +17,10 @@ function openApp(id) {
 
     addToTaskbar(id, win.data("title"), win.data("icon"));
 
+    // Load browser default URL if first time opened
     if (id === "browser" && !win.data("loaded")) {
         win.find("#iframe").attr("src", "https://example.com");
+        win.find("#url").val("");
         win.data("loaded", true);
     }
 }
@@ -47,6 +49,14 @@ $(document).on("click", ".task-app", function () {
 $(document).on("click", ".close", function () {
     const win = $(this).closest(".window");
     removeFromTaskbar(win.attr("id"));
+
+    // reset browser input and iframe
+    if (win.attr("id") === "browser") {
+        win.find("#url").val("");
+        win.find("#iframe").attr("src", "about:blank");
+        win.data("loaded", false);
+    }
+
     win.addClass("d-none");
 });
 
@@ -80,6 +90,7 @@ function clock() {
 setInterval(clock, 1000);
 clock();
 
+// add app to taskbar dynamically
 function addToTaskbar(id, title, icon) {
     if ($("#taskbar-" + id).length) return;
 
@@ -92,6 +103,29 @@ function addToTaskbar(id, title, icon) {
     `);
 }
 
+// remove app from taskbar
 function removeFromTaskbar(id) {
     $("#taskbar-" + id).remove();
 }
+
+// Browser search logic
+$(document).on("click", "#search", function () {
+    const win = $("#browser");
+    const urlInput = win.find("#url");
+    const iframe = win.find("#iframe");
+    const loader = win.find("#loader");
+
+    let url = urlInput.val();
+    if (!/^https?:\/\//i.test(url)) url = 'https://' + url;
+
+    loader.removeClass("d-none");
+    iframe.attr("src", url);
+});
+
+$("#url").on("keypress", function (e) {
+    if (e.key === "Enter") $("#search").click();
+});
+
+$("#iframe").on("load", function () {
+    $("#loader").addClass("d-none");
+});
