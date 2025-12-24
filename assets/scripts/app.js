@@ -5,17 +5,21 @@ $(document).on("mouseenter", ".window", function () {
 
 // draggable
 $(document).on("mouseenter", ".window", function () {
-    $(this).draggable({handle: ".bg-light"});
+    $(this).draggable({handle: ".border-bottom:first"});
 });
 
 // open app
 function openApp(id) {
     $(".window").css("z-index", 1);
-    const win = $("#" + id).removeClass("d-none").css("z-index", 10);
 
-    // restore browser default page when reopening
-    if (id === "browser") {
+    const win = $("#" + id);
+    win.removeClass("d-none").css("z-index", 10);
+
+    addToTaskbar(id, win.data("title"), win.data("icon"));
+
+    if (id === "browser" && !win.data("loaded")) {
         win.find("#iframe").attr("src", "https://example.com");
+        win.data("loaded", true);
     }
 }
 
@@ -34,15 +38,20 @@ $(document).on("click", ".app-launch", function (e) {
 
 // taskbar apps → click
 $(document).on("click", ".task-app", function () {
-    openApp($(this).data("app"));
+    const id = $(this).data("app");
+    $(".window").css("z-index", 1);
+    $("#" + id).removeClass("d-none").css("z-index", 10);
 });
 
 // close & minimize
-$(document).on("click", ".close, .minimize", function () {
+$(document).on("click", ".close", function () {
     const win = $(this).closest(".window");
+    removeFromTaskbar(win.attr("id"));
     win.addClass("d-none");
-    win.find("#url").val("");
-    win.find("#iframe").attr("src", "about:blank");
+});
+
+$(document).on("click", ".minimize", function () {
+    $(this).closest(".window").addClass("d-none");
 });
 
 // start button
@@ -70,3 +79,19 @@ function clock() {
 
 setInterval(clock, 1000);
 clock();
+
+function addToTaskbar(id, title, icon) {
+    if ($("#taskbar-" + id).length) return;
+
+    $("#taskbarApps").append(`
+        <i class="bi ${icon} fs-4 task-app"
+           id="taskbar-${id}"
+           data-app="${id}"
+           title="${title}">
+        </i>
+    `);
+}
+
+function removeFromTaskbar(id) {
+    $("#taskbar-" + id).remove();
+}
