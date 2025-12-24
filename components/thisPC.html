@@ -1,22 +1,55 @@
-<div id="pc" class="window position-fixed top-50 start-50 translate-middle bg-white rounded shadow d-none w-50">
+<div id="pc"
+     class="window position-fixed top-50 start-50 translate-middle bg-dark text-light rounded shadow d-none w-75 h-75 d-flex flex-column">
 
-    <div class="d-flex justify-content-between align-items-center px-2 py-1">
+    <div class="d-flex justify-content-between align-items-center px-2 py-2 border-bottom border-secondary">
         <strong>This PC</strong>
         <div>
             <button class="btn btn-sm btn-secondary minimize">—</button>
+            <button class="btn btn-sm btn-secondary maximize">▢</button>
             <button class="btn btn-sm btn-danger close">✕</button>
         </div>
     </div>
 
-    <div class="p-3">
-        <div class="mb-2">Local Disk (C:)</div>
-        <div class="progress mb-3">
-            <div class="progress-bar w-75"></div>
-        </div>
-        <div>Local Disk (D:)</div>
-        <div class="progress">
-            <div class="progress-bar w-50"></div>
+    <div class="p-3 flex-grow-1 overflow-auto">
+        <div class="fw-semibold mb-3">Devices and drives</div>
+        <div class="row g-4">
+
+            <!-- C Drive -->
+            <div class="col-md-4">
+                <div class="border border-secondary rounded p-2">
+                    <div class="fw-semibold">Local Disk (C:)</div>
+                    <small class="text-secondary">28.7 GB free of 118 GB</small>
+                    <div class="progress mt-2">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 75%;" aria-valuenow="75"
+                             aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- D Drive -->
+            <div class="col-md-4">
+                <div class="border border-secondary rounded p-2">
+                    <div class="fw-semibold">Local Disk (D:)</div>
+                    <small class="text-secondary">110 GB free of 931 GB</small>
+                    <div class="progress mt-2">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 50%;" aria-valuenow="50"
+                             aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DVD -->
+            <div class="col-md-4">
+                <div class="border border-secondary rounded p-2">
+                    <div class="fw-semibold">DVD RW Drive (E:)</div>
+                    <small class="text-secondary">Empty</small>
+                    <div class="progress mt-2">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 0%;" aria-valuenow="0"
+                             aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-
 </div>
