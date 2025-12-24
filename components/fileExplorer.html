@@ -1,19 +1,129 @@
-<div id="explorer" class="window position-fixed top-50 start-50 translate-middle bg-white rounded shadow d-none w-50">
+<div id="explorer" data-icon="bi-folder"
+     class="window position-fixed top-50 start-50 translate-middle bg-dark text-light rounded shadow d-none w-75 h-75 d-flex flex-column">
 
-    <div class="d-flex justify-content-between align-items-center px-2 py-1">
+    <!-- Title bar -->
+    <div class="d-flex justify-content-between align-items-center px-2 py-2 border-bottom border-secondary">
         <strong>File Explorer</strong>
         <div>
             <button class="btn btn-sm btn-secondary minimize">—</button>
+            <button class="btn btn-sm btn-secondary maximize">▢</button>
             <button class="btn btn-sm btn-danger close">✕</button>
         </div>
     </div>
 
-    <div class="p-3">
-        <ul class="list-group">
-            <li class="list-group-item">Documents</li>
-            <li class="list-group-item">Downloads</li>
-            <li class="list-group-item">Pictures</li>
-        </ul>
+    <!-- Navigation -->
+    <div class="px-2 py-2 border-bottom border-secondary d-flex justify-content-between align-items-center">
+        <div class="text-secondary small">Home &gt;</div>
+        <div class="d-flex gap-2">
+            <button class="btn btn-sm btn-secondary">New Folder</button>
+        </div>
     </div>
 
+    <!-- Content -->
+    <div class="flex-grow-1 overflow-auto">
+        <div class="row g-0 h-100">
+
+            <!-- Sidebar -->
+            <div class="col-3 border-end border-secondary p-3">
+                <div class="fw-semibold mb-3">Quick access</div>
+
+                <ul class="list-group list-group-flush small">
+                    <li class="list-group-item bg-transparent text-light border-secondary">
+                        <i class="bi bi-folder-fill me-2"></i> Documents
+                    </li>
+                    <li class="list-group-item bg-transparent text-light border-secondary">
+                        <i class="bi bi-download me-2"></i> Downloads
+                    </li>
+                    <li class="list-group-item bg-transparent text-light border-secondary">
+                        <i class="bi bi-image me-2"></i> Pictures
+                    </li>
+                    <li class="list-group-item bg-transparent text-light border-secondary">
+                        <i class="bi bi-music-note-beamed me-2"></i> Music
+                    </li>
+                    <li class="list-group-item bg-transparent text-light border-secondary">
+                        <i class="bi bi-film me-2"></i> Videos
+                    </li>
+                    <li class="list-group-item bg-transparent text-light border-secondary">
+                        <i class="bi bi-journal-text me-2"></i> Notes
+                    </li>
+                    <li class="list-group-item bg-transparent text-light border-secondary">
+                        <i class="bi bi-clock-history me-2"></i> Recent
+                    </li>
+                    <li class="list-group-item bg-transparent text-light border-secondary">
+                        <i class="bi bi-star me-2"></i> Favorites
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Main area -->
+            <div class="col-9 p-3">
+
+                <div class="fw-semibold mb-3">Folders</div>
+                <div class="row row-cols-2 row-cols-md-4 g-4 mb-4">
+
+                    <div class="col text-center">
+                        <div class="border border-secondary rounded p-3 bg-secondary bg-opacity-10">
+                            <i class="bi bi-folder-fill fs-2 text-primary"></i>
+                            <div class="mt-2">Documents</div>
+                        </div>
+                    </div>
+
+                    <div class="col text-center">
+                        <div class="border border-secondary rounded p-3 bg-secondary bg-opacity-10">
+                            <i class="bi bi-download fs-2 text-success"></i>
+                            <div class="mt-2">Downloads</div>
+                        </div>
+                    </div>
+
+                    <div class="col text-center">
+                        <div class="border border-secondary rounded p-3 bg-secondary bg-opacity-10">
+                            <i class="bi bi-image fs-2 text-warning"></i>
+                            <div class="mt-2">Pictures</div>
+                        </div>
+                    </div>
+
+                    <div class="col text-center">
+                        <div class="border border-secondary rounded p-3 bg-secondary bg-opacity-10">
+                            <i class="bi bi-music-note-beamed fs-2 text-danger"></i>
+                            <div class="mt-2">Music</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="fw-semibold mb-3">Files</div>
+                <table class="table table-dark table-hover table-sm align-middle">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Size</th>
+                        <th>Date modified</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><i class="bi bi-file-earmark-text me-2"></i> Resume.docx</td>
+                        <td>Word Document</td>
+                        <td>120 KB</td>
+                        <td>Yesterday</td>
+                    </tr>
+                    <tr>
+                        <td><i class="bi bi-file-earmark-image me-2"></i> Photo.png</td>
+                        <td>PNG Image</td>
+                        <td>2.3 MB</td>
+                        <td>2 days ago</td>
+                    </tr>
+                    <tr>
+                        <td><i class="bi bi-file-earmark-play me-2"></i> Video.mp4</td>
+                        <td>MP4 File</td>
+                        <td>18 MB</td>
+                        <td>Last week</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
 </div>
