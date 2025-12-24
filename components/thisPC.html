@@ -10,42 +10,84 @@
         </div>
     </div>
 
+    <!-- Navigation -->
+    <div class="px-2 py-2 border-bottom border-secondary d-flex justify-content-between align-items-center">
+        <div class="text-secondary small">This PC &gt;</div>
+        <div class="d-flex gap-2">
+            <button class="btn btn-sm btn-secondary">New Folder</button>
+        </div>
+    </div>
+
     <div class="p-3 flex-grow-1 overflow-auto">
+
+        <!-- Quick access -->
+        <div class="mb-4">
+            <div class="fw-semibold mb-2">Quick access</div>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                <div class="col">
+                    <div class="border border-secondary rounded p-3 text-center bg-secondary bg-opacity-10 hover-bg-light">
+                        Documents
+                        <small class="d-block text-secondary">12 files</small>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="border border-secondary rounded p-3 text-center bg-secondary bg-opacity-10 hover-bg-light">
+                        Downloads
+                        <small class="d-block text-secondary">8 files</small>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="border border-secondary rounded p-3 text-center bg-secondary bg-opacity-10 hover-bg-light">
+                        Desktop
+                        <small class="d-block text-secondary">5 files</small>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Devices and drives -->
         <div class="fw-semibold mb-3">Devices and drives</div>
-        <div class="row g-4">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
 
             <!-- C Drive -->
-            <div class="col-md-4">
-                <div class="border border-secondary rounded p-2">
+            <div class="col">
+                <div class="border border-secondary rounded p-3 bg-secondary bg-opacity-10">
                     <div class="fw-semibold">Local Disk (C:)</div>
                     <small class="text-secondary">28.7 GB free of 118 GB</small>
-                    <div class="progress mt-2">
+                    <div class="progress mt-2" style="height: 12px;">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 75%;" aria-valuenow="75"
-                             aria-valuemin="0" aria-valuemax="100"></div>
+                             aria-valuemin="0" aria-valuemax="100">
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- D Drive -->
-            <div class="col-md-4">
-                <div class="border border-secondary rounded p-2">
+            <div class="col">
+                <div class="border border-secondary rounded p-3 bg-secondary bg-opacity-10">
                     <div class="fw-semibold">Local Disk (D:)</div>
                     <small class="text-secondary">110 GB free of 931 GB</small>
-                    <div class="progress mt-2">
+                    <div class="progress mt-2" style="height: 12px;">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 50%;" aria-valuenow="50"
-                             aria-valuemin="0" aria-valuemax="100"></div>
+                             aria-valuemin="0" aria-valuemax="100">
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- DVD -->
-            <div class="col-md-4">
-                <div class="border border-secondary rounded p-2">
+            <div class="col">
+                <div class="border border-secondary rounded p-3 bg-secondary bg-opacity-10">
                     <div class="fw-semibold">DVD RW Drive (E:)</div>
                     <small class="text-secondary">Empty</small>
-                    <div class="progress mt-2">
+                    <div class="progress mt-2" style="height: 12px;">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 0%;" aria-valuenow="0"
-                             aria-valuemin="0" aria-valuemax="100"></div>
+                             aria-valuemin="0" aria-valuemax="100">
+                        </div>
                     </div>
                 </div>
             </div>
