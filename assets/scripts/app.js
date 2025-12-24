@@ -11,7 +11,12 @@ $(document).on("mouseenter", ".window", function () {
 // open app
 function openApp(id) {
     $(".window").css("z-index", 1);
-    $("#" + id).removeClass("d-none").css("z-index", 10);
+    const win = $("#" + id).removeClass("d-none").css("z-index", 10);
+
+    // restore browser default page when reopening
+    if (id === "browser") {
+        win.find("#iframe").attr("src", "https://example.com");
+    }
 }
 
 // desktop apps → double click
@@ -34,7 +39,10 @@ $(document).on("click", ".task-app", function () {
 
 // close & minimize
 $(document).on("click", ".close, .minimize", function () {
-    $(this).closest(".window").addClass("d-none");
+    const win = $(this).closest(".window");
+    win.addClass("d-none");
+    win.find("#url").val("");
+    win.find("#iframe").attr("src", "about:blank");
 });
 
 // start button
