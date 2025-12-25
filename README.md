@@ -4,7 +4,7 @@ Experience a fully functional **Windows 11** directly in your browser. This proj
 elements and interactions, including a dynamic desktop, taskbar, start menu, search, draggable app windows, and basic
 applications like This PC, File Explorer, Recycle Bin, and Browser. It’s designed as a learning tool and a showcase of
 web-based UI emulation. Explore the immersive Windows 11 experience, interact with apps, and see how desktop
-functionalities can be recreated entirely in the browser
+functionalities can be recreated entirely in the browser.
 
 ## 🛠️ Technologies
 
