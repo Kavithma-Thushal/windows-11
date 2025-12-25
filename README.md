@@ -22,8 +22,8 @@ functionalities can be recreated entirely in the browser.
 ✅ Draggable App Windows: Rounded corners, minimize, maximize, close, and focus handling.<br/>
 ✅ This PC: Drive simulation with fake storage bars.<br/>
 ✅ File Explorer: Sidebar, breadcrumb header, folder simulation, dynamic file listing.<br/>
-✅ Recycle Bin: Delete, restore, and empty files functionality.<br/>
 ✅ Browser: Simple address bar with iframe-based page loading.<br/>
+✅ Recycle Bin: Delete, restore, and empty files functionality.<br/>
 
 ## 📸 Screenshots
 
@@ -43,13 +43,13 @@ functionalities can be recreated entirely in the browser.
 
 <img src="ss/file-explorer.png">
 
-### Recycle Bin
-
-<img src="ss/recycle-bin.png">
-
 ### Browser
 
 <img src="ss/browser.png">
+
+### Recycle Bin
+
+<img src="ss/recycle-bin.png">
 
 ## 📝 Version
 
