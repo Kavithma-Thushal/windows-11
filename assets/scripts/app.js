@@ -129,8 +129,3 @@ $("#url").on("keypress", function (e) {
 $("#iframe").on("load", function () {
     $("#loader").addClass("d-none");
 });
-
-$(document).on("dblclick", ".explorer-music", function (e) {
-    e.stopPropagation();
-    openApp($(this).data("app"));
-});
