@@ -1,0 +1,146 @@
+<div id="music" data-title="Music" data-icon="bi-music-note-beamed"
+     class="window position-fixed top-50 start-50 translate-middle bg-dark text-light rounded shadow d-none w-75 h-90 d-flex flex-column">
+
+    <!-- Title bar -->
+    <div class="d-flex justify-content-between align-items-center px-2 py-2 border-bottom border-secondary">
+        <strong>Music</strong>
+        <div>
+            <button class="btn btn-sm btn-secondary minimize">—</button>
+            <button class="btn btn-sm btn-secondary maximize">▢</button>
+            <button class="btn btn-sm btn-danger close">✕</button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="px-2 py-2 border-bottom border-secondary d-flex justify-content-between align-items-center">
+        <div class="text-secondary small">Library &gt; Music</div>
+        <div class="d-flex gap-2">
+            <button class="btn btn-sm btn-secondary">Shuffle</button>
+            <button class="btn btn-sm btn-secondary">Add Music</button>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="flex-grow-1 d-flex">
+        <div class="row g-0 flex-grow-1 w-100">
+
+            <!-- Sidebar -->
+            <div class="col-3 border-end border-secondary p-3 d-flex flex-column">
+                <div class="fw-semibold mb-3">Library</div>
+
+                <ul class="list-group list-group-flush small flex-grow-1">
+                    <li class="list-group-item bg-transparent text-light border-secondary">
+                        <i class="bi bi-music-note-list me-2"></i> Songs
+                    </li>
+                    <li class="list-group-item bg-transparent text-light border-secondary">
+                        <i class="bi bi-disc me-2"></i> Albums
+                    </li>
+                    <li class="list-group-item bg-transparent text-light border-secondary">
+                        <i class="bi bi-person-lines-fill me-2"></i> Artists
+                    </li>
+                    <li class="list-group-item bg-transparent text-light border-secondary">
+                        <i class="bi bi-collection-play me-2"></i> Playlists
+                    </li>
+                    <li class="list-group-item bg-transparent text-light border-secondary">
+                        <i class="bi bi-clock-history me-2"></i> Recently Played
+                    </li>
+                    <li class="list-group-item bg-transparent text-light border-secondary">
+                        <i class="bi bi-heart me-2"></i> Favorites
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Main area -->
+            <div class="col-9 p-3 d-flex flex-column justify-content-between">
+                <div>
+                    <div class="fw-semibold mb-3">Albums</div>
+                    <div class="row row-cols-2 row-cols-md-4 g-4 mb-4">
+
+                        <div class="col text-center">
+                            <div class="border border-secondary rounded p-3 bg-secondary bg-opacity-10">
+                                <i class="bi bi-disc fs-2 text-primary"></i>
+                                <div class="mt-2">Chill Beats</div>
+                                <div class="small text-secondary">12 Songs</div>
+                            </div>
+                        </div>
+
+                        <div class="col text-center">
+                            <div class="border border-secondary rounded p-3 bg-secondary bg-opacity-10">
+                                <i class="bi bi-disc fs-2 text-success"></i>
+                                <div class="mt-2">Rock Classics</div>
+                                <div class="small text-secondary">18 Songs</div>
+                            </div>
+                        </div>
+
+                        <div class="col text-center">
+                            <div class="border border-secondary rounded p-3 bg-secondary bg-opacity-10">
+                                <i class="bi bi-disc fs-2 text-danger"></i>
+                                <div class="mt-2">Top Hits</div>
+                                <div class="small text-secondary">25 Songs</div>
+                            </div>
+                        </div>
+
+                        <div class="col text-center">
+                            <div class="border border-secondary rounded p-3 bg-secondary bg-opacity-10">
+                                <i class="bi bi-disc fs-2 text-warning"></i>
+                                <div class="mt-2">Instrumental</div>
+                                <div class="small text-secondary">9 Songs</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="fw-semibold mb-3">Songs</div>
+                    <table class="table table-dark table-hover table-sm align-middle mb-3">
+                        <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Artist</th>
+                            <th>Album</th>
+                            <th>Duration</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><i class="bi bi-music-note-beamed me-2"></i> Night Drive</td>
+                            <td>DJ Nova</td>
+                            <td>Chill Beats</td>
+                            <td>3:45</td>
+                        </tr>
+                        <tr>
+                            <td><i class="bi bi-music-note-beamed me-2"></i> Thunder Road</td>
+                            <td>The Rockets</td>
+                            <td>Rock Classics</td>
+                            <td>4:12</td>
+                        </tr>
+                        <tr>
+                            <td><i class="bi bi-music-note-beamed me-2"></i> Soft Piano</td>
+                            <td>Relax Lab</td>
+                            <td>Instrumental</td>
+                            <td>2:58</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Player Controls -->
+                <div class="border-top border-secondary pt-3 d-flex justify-content-between align-items-center">
+                    <div class="small text-secondary">
+                        Now Playing: <span class="text-light">Night Drive</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-sm btn-secondary">
+                            <i class="bi bi-skip-backward-fill"></i>
+                        </button>
+                        <button class="btn btn-sm btn-success">
+                            <i class="bi bi-play-fill"></i>
+                        </button>
+                        <button class="btn btn-sm btn-secondary">
+                            <i class="bi bi-skip-forward-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -32,8 +32,10 @@
 
     $("#windows").load("components/thisPC.html", function () {
         $("#windows").append($("<div>").load("components/fileExplorer.html"));
-        $("#windows").append($("<div>").load("components/recycleBin.html"));
         $("#windows").append($("<div>").load("components/browser.html"));
+        $("#windows").append($("<div>").load("components/recycleBin.html"));
+
+        $("#windows").append($("<div>").load("components/music.html"));
     });
 </script>
 
