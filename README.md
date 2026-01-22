@@ -1,4 +1,4 @@
-# ⭐ Windows 11 UI ⭐
+# ⭐ Windows 11 ⭐
 
 Experience a fully functional **Windows 11** directly in your browser. This project replicates core Windows 11 UI
 elements and interactions, including a dynamic desktop, taskbar, start menu, search, draggable app windows, and basic
@@ -17,7 +17,7 @@ functionalities can be recreated entirely in the browser.
 ## 🚀 Features
 
 ✅ Desktop UI: Full-screen background, left-aligned icons, draggable apps.<br/>
-✅ Taskbar: Centered icons, start menu, live clock, active app highlighting.<br/>
+✅ Taskbar: left-aligned icons, start menu, live clock, active app highlighting.<br/>
 ✅ Start Menu: Windows 11 style popup with app grid and power buttons.<br/>
 ✅ Draggable App Windows: Rounded corners, minimize, maximize, close, and focus handling.<br/>
 ✅ This PC: Drive simulation with fake storage bars.<br/>
@@ -65,8 +65,6 @@ Encountered any issues, or want to learn more about the project? Reach out direc
 
 #### This project is licensed under the [GNU License](LICENSE)
 
-#### © 2025 All Rights Reserved | Designed by [Kavithma Thushal](https://github.com/Kavithma-Thushal)
-
-#### ‍⚠️👷‍♂️ This Web Project is currently Under Development. Stay tuned for updates! 👷‍♂️⚠️
+#### © 2026 All Rights Reserved | Designed by [Kavithma Thushal](https://github.com/Kavithma-Thushal)
 
 </div>
