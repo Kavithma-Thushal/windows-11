@@ -1,4 +1,4 @@
-# ⭐ Windows 11 ⭐
+# 🪟 Windows 11 🪟
 
 Experience a fully functional **Windows 11** directly in your browser. This project replicates core Windows 11 UI
 elements and interactions, including a dynamic desktop, taskbar, start menu, search, draggable app windows, and basic
