@@ -16,10 +16,10 @@ functionalities can be recreated entirely in the browser.
 
 ## 🚀 Features
 
-✅ Desktop UI: Full-screen background, left-aligned icons, draggable apps.<br/>
+✅ Desktop : Full-screen background, left-aligned icons, draggable apps.<br/>
 ✅ Taskbar: left-aligned icons, start menu, live clock, active app highlighting.<br/>
 ✅ Start Menu: Windows 11 style popup with app grid and power buttons.<br/>
-✅ Draggable App Windows: Rounded corners, minimize, maximize, close, and focus handling.<br/>
+✅ Music Player: Play, pause, and control audio.<br/>
 ✅ This PC: Drive simulation with fake storage bars.<br/>
 ✅ File Explorer: Sidebar, breadcrumb header, folder simulation, dynamic file listing.<br/>
 ✅ Browser: Simple address bar with iframe-based page loading.<br/>
@@ -42,6 +42,10 @@ functionalities can be recreated entirely in the browser.
 ### File Explorer
 
 <img src="ss/file-explorer.png">
+
+### Music Player
+
+<img src="ss/music-player.png">
 
 ### Browser
 
