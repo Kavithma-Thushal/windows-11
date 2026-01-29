@@ -12,19 +12,29 @@
     </div>
 
     <!-- Content -->
-    <div class="p-2 d-flex flex-column flex-grow-1">
+    <div class="p-2 d-flex flex-column flex-grow-1 justify-content-center align-items-center">
 
-        <div class="d-flex mb-2 gap-2">
-            <input id="url" class="form-control flex-grow-1" type="text" placeholder="https://example.com">
-            <button id="search" class="btn btn-primary">Search</button>
+        <div class="w-75 text-center">
+            <h1 id="googleLogo" class="text-light mt-3 mb-4" style="font-family: 'Product Sans', sans-serif;">
+                <span style="color:#4285F4;">G</span>
+                <span style="color:#EA4335;">o</span>
+                <span style="color:#FBBC05;">o</span>
+                <span style="color:#4285F4;">g</span>
+                <span style="color:#34A853;">l</span>
+                <span style="color:#EA4335;">e</span>
+            </h1>
+            <div class="d-flex gap-2 justify-content-center mb-4">
+                <input id="url" class="form-control flex-grow-1" type="text" placeholder="Search Google or type a URL">
+                <button id="search" class="btn btn-primary">Search</button>
+            </div>
         </div>
 
-        <div class="position-relative flex-grow-1">
+        <div class="position-relative flex-grow-1 w-100">
             <div id="loader"
                  class="position-absolute top-50 start-50 translate-middle d-flex justify-content-center align-items-center">
                 <div class="spinner-border text-secondary"></div>
             </div>
-            <iframe id="iframe" class="w-100 h-100 border-0"></iframe>
+            <iframe id="iframe" class="w-100 h-100 border-0 rounded"></iframe>
         </div>
 
     </div>
@@ -33,10 +43,13 @@
 <script>
     const iframe = document.getElementById('iframe');
     const loader = document.getElementById('loader');
+    const googleLogo = document.getElementById('googleLogo');
 
     function loadBrowserURL() {
         let url = document.getElementById('url').value;
         if (!/^https?:\/\//i.test(url)) url = 'https://' + url;
+
+        googleLogo.style.display = 'none';
         loader.classList.remove('d-none');
         iframe.src = url;
     }
