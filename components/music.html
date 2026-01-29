@@ -16,7 +16,7 @@
         <div class="text-secondary small">Library &gt; Music</div>
         <div class="d-flex gap-2">
             <button class="btn btn-sm btn-secondary">Shuffle</button>
-            <button class="btn btn-sm btn-secondary">Add Music</button>
+            <button class="btn btn-sm btn-secondary">Add</button>
         </div>
     </div>
 
@@ -33,16 +33,16 @@
                         <i class="bi bi-music-note-list me-2"></i> Songs
                     </li>
                     <li class="list-group-item bg-transparent text-light border-secondary">
+                        <i class="bi bi-collection-play me-2"></i> Playlists
+                    </li>
+                    <li class="list-group-item bg-transparent text-light border-secondary">
                         <i class="bi bi-disc me-2"></i> Albums
                     </li>
                     <li class="list-group-item bg-transparent text-light border-secondary">
                         <i class="bi bi-person-lines-fill me-2"></i> Artists
                     </li>
                     <li class="list-group-item bg-transparent text-light border-secondary">
-                        <i class="bi bi-collection-play me-2"></i> Playlists
-                    </li>
-                    <li class="list-group-item bg-transparent text-light border-secondary">
-                        <i class="bi bi-clock-history me-2"></i> Recently Played
+                        <i class="bi bi-clock-history me-2"></i> Recent
                     </li>
                     <li class="list-group-item bg-transparent text-light border-secondary">
                         <i class="bi bi-heart me-2"></i> Favorites
@@ -60,38 +60,37 @@
                             <div class="border border-secondary rounded p-3 bg-secondary bg-opacity-10">
                                 <i class="bi bi-disc fs-2 text-primary"></i>
                                 <div class="mt-2">DJ</div>
-                                <div class="small text-secondary">12 Songs</div>
-                            </div>
-                        </div>
-
-                        <div class="col text-center">
-                            <div class="border border-secondary rounded p-3 bg-secondary bg-opacity-10">
-                                <i class="bi bi-disc fs-2 text-success"></i>
-                                <div class="mt-2">Normal</div>
-                                <div class="small text-secondary">18 Songs</div>
+                                <div class="small text-secondary">10 Songs</div>
                             </div>
                         </div>
 
                         <div class="col text-center">
                             <div class="border border-secondary rounded p-3 bg-secondary bg-opacity-10">
                                 <i class="bi bi-disc fs-2 text-danger"></i>
-                                <div class="mt-2">Boot</div>
-                                <div class="small text-secondary">25 Songs</div>
+                                <div class="mt-2">English</div>
+                                <div class="small text-secondary">15 Songs</div>
                             </div>
                         </div>
 
                         <div class="col text-center">
                             <div class="border border-secondary rounded p-3 bg-secondary bg-opacity-10">
                                 <i class="bi bi-disc fs-2 text-warning"></i>
-                                <div class="mt-2">Old</div>
-                                <div class="small text-secondary">9 Songs</div>
+                                <div class="mt-2">Mashup</div>
+                                <div class="small text-secondary">20 Songs</div>
+                            </div>
+                        </div>
+
+                        <div class="col text-center">
+                            <div class="border border-secondary rounded p-3 bg-secondary bg-opacity-10">
+                                <i class="bi bi-disc fs-2 text-success"></i>
+                                <div class="mt-2">Sinhala</div>
+                                <div class="small text-secondary">25 Songs</div>
                             </div>
                         </div>
 
                     </div>
 
-                    <div class="fw-semibold mb-3">Songs</div>
-
+                    <div class="fw-semibold mb-2">Songs</div>
                     <table class="table table-dark table-hover table-sm align-middle mb-3" id="songsTable">
                         <thead>
                         <tr>
@@ -102,25 +101,30 @@
                         </tr>
                         </thead>
                         <tbody>
+                        <tr data-src="assets/music/ahimi.mp3">
+                            <td>Ahimi</td>
+                            <td>Zany</td>
+                            <td>Sinhala</td>
+                            <td>04:24</td>
+                        </tr>
+                        <tr data-src="assets/music/asamasama.mp3">
+                            <td>Asamasama</td>
+                            <td>Inzer</td>
+                            <td>DJ</td>
+                            <td>03:19</td>
+                        </tr>
                         <tr data-src="assets/music/pharmacy.mp3">
                             <td>Pharmacy</td>
                             <td>Costa</td>
                             <td>DJ</td>
-                            <td>3:45</td>
-                        </tr>
-                        <tr data-src="assets/music/ahimi.mp3">
-                            <td>Ahimi</td>
-                            <td>Zany</td>
-                            <td>DJ</td>
-                            <td>3:45</td>
+                            <td>04:02</td>
                         </tr>
                         </tbody>
                     </table>
-
                 </div>
 
                 <!-- Player Controls -->
-                <div class="border-top border-secondary pt-3 d-flex justify-content-between align-items-center">
+                <div class="pt-3 d-flex justify-content-between align-items-center">
 
                     <div class="small text-secondary">
                         Now Playing: <span class="text-light"></span>
