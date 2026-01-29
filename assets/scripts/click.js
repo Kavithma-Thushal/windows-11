@@ -8,7 +8,7 @@ $(document).on("dblclick", ".app-icon", function (e) {
 $(document).on("click", ".app-launch", function (e) {
     e.stopPropagation();
     openApp($(this).data("app"));
-    $("#startMenu").addClass("d-none");
+    $("#start").addClass("d-none");
 });
 
 // taskbar apps → click

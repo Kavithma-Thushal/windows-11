@@ -1,7 +1,7 @@
 # 🪟 Windows 11 🪟
 
 Experience a fully functional **Windows 11** directly in your browser. This project replicates core Windows 11 UI
-elements and interactions, including a dynamic desktop, taskbar, start menu, search, draggable app windows, and basic
+elements and interactions, including a dynamic desktop, taskbar, start, search, draggable app windows, and basic
 applications like This PC, File Explorer, Browser and Recycle Bin. It’s designed as a learning tool and a showcase of
 web-based UI emulation. Explore the immersive Windows 11 experience, interact with apps, and see how desktop
 functionalities can be recreated entirely in the browser.
@@ -16,9 +16,9 @@ functionalities can be recreated entirely in the browser.
 
 ## 🚀 Features
 
-✅ Desktop : Full-screen background, left-aligned icons, draggable apps.<br/>
-✅ Taskbar: left-aligned icons, start menu, live clock, active app highlighting.<br/>
-✅ Start Menu: Windows 11 style popup with app grid and power buttons.<br/>
+✅ Desktop: Full-screen background, left-aligned icons, draggable apps.<br/>
+✅ Taskbar: left-aligned icons, start, live clock, active app highlighting.<br/>
+✅ Start: Windows 11 style popup with app grid and power buttons.<br/>
 ✅ Music Player: Play, pause, and control audio.<br/>
 ✅ This PC: Drive simulation with fake storage bars.<br/>
 ✅ File Explorer: Sidebar, breadcrumb header, folder simulation, dynamic file listing.<br/>
@@ -31,9 +31,9 @@ functionalities can be recreated entirely in the browser.
 
 <img src="ss/desktop.png">
 
-### Start Menu
+### Start
 
-<img src="ss/start-menu.png">
+<img src="ss/start.png">
 
 ### This PC
 
