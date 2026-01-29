@@ -11,20 +11,20 @@
 
 <body style="user-select: none;">
 <div id="desktop"></div>
-<div id="startMenu"></div>
 <div id="taskbar"></div>
+<div id="startMenu"></div>
 <div id="windows"></div>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="assets/scripts/click.js"></script>
-<script src="assets/scripts/start.js"></script>
 <script src="assets/scripts/taskbar.js"></script>
+<script src="assets/scripts/start.js"></script>
 <script src="assets/scripts/browser.js"></script>
 <script src="assets/scripts/music.js"></script>
 <script>
     $("#desktop").load("components/desktop.html");
-    $("#startMenu").load("components/start.html");
     $("#taskbar").load("components/taskbar.html");
+    $("#startMenu").load("components/start.html");
 
     $("#windows").load("components/thisPC.html", function () {
         $("#windows").append($("<div>").load("components/fileExplorer.html"));
