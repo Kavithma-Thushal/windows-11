@@ -1,8 +1,3 @@
-$(document).on("dblclick", ".explorer-music", function (e) {
-    e.stopPropagation();
-    openApp($(this).data("app"));
-});
-
 // Click on a song row to play
 $(document).on("click", "#songsTable tbody tr", function () {
     const src = $(this).data("src");
