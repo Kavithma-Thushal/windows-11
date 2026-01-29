@@ -77,19 +77,6 @@ $(document).on("click", function (e) {
     }
 });
 
-// clock
-function clock() {
-    let time = new Date().toLocaleTimeString([], {
-        hour: "numeric",
-        minute: "2-digit",
-        hour12: true
-    });
-    $("#clock").text(time.toUpperCase());
-}
-
-setInterval(clock, 1000);
-clock();
-
 // add app to taskbar dynamically
 function addToTaskbar(id, title, icon) {
     if ($("#taskbar-" + id).length) return;
@@ -129,3 +116,30 @@ $("#url").on("keypress", function (e) {
 $("#iframe").on("load", function () {
     $("#loader").addClass("d-none");
 });
+
+// time
+function time() {
+    let time = new Date().toLocaleTimeString([], {
+        hour: "numeric",
+        minute: "2-digit",
+        hour12: true
+    });
+    $("#time").text(time.toUpperCase());
+}
+
+setInterval(time, 1000);
+time();
+
+// date
+function date() {
+    const now = new Date();
+
+    const month = now.getMonth() + 1;
+    const day = now.getDate();
+    const year = now.getFullYear();
+
+    $("#date").text(month + "/" + day + "/" + year);
+}
+
+setInterval(date, 1000);
+date();

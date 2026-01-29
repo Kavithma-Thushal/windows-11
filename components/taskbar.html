@@ -1,6 +1,7 @@
 <div class="position-fixed bottom-0 w-100 bg-dark text-white">
     <div class="d-flex align-items-center justify-content-between px-3">
 
+        <!-- Left Side -->
         <div class="d-flex gap-4 py-2">
             <i class="bi bi-windows fs-4" id="startBtn"></i>
             <i class="bi bi-search fs-4"></i>
@@ -10,6 +11,16 @@
             <div id="taskbarApps" class="d-flex gap-4"></div>
         </div>
 
-        <div id="clock" class="small"></div>
+        <!-- Right Side -->
+        <div class="d-flex align-items-center gap-3 py-2">
+            <i class="bi bi-wifi fs-5"></i>
+            <i class="bi bi-volume-up fs-5"></i>
+            <i class="bi bi-battery-full fs-5"></i>
+
+            <div class="text-end small">
+                <div id="time"></div>
+                <div id="date"></div>
+            </div>
+        </div>
     </div>
 </div>
