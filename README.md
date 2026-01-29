@@ -47,6 +47,10 @@ functionalities can be recreated entirely in the browser.
 
 <img src="ss/music-player.png">
 
+### Settings
+
+<img src="ss/settings.png">
+
 ### Browser
 
 <img src="ss/browser.png">
