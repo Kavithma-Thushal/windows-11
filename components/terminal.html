@@ -1,0 +1,32 @@
+<div id="terminal" data-icon="bi-terminal"
+     class="window position-fixed top-50 start-50 translate-middle bg-dark text-light rounded shadow d-none w-75 h-75 d-flex flex-column">
+
+    <!-- Title bar -->
+    <div class="d-flex justify-content-between align-items-center px-2 py-2 border-bottom border-secondary">
+        <strong>Command Prompt</strong>
+        <div>
+            <button class="btn btn-sm btn-secondary minimize">—</button>
+            <button class="btn btn-sm btn-secondary maximize">▢</button>
+            <button class="btn btn-sm btn-danger close">✕</button>
+        </div>
+    </div>
+
+    <!-- Terminal Body -->
+    <div id="cmdBody" class="flex-grow-1 p-3 overflow-auto"
+         style="background:black; color:#00ff00; font-family: Consolas, monospace; font-size:14px;">
+
+        <div>Microsoft Windows [Version 10.0.26200.7840]</div>
+        <div>(c) Microsoft Corporation. All rights reserved.</div>
+        <br>
+
+        <div id="terminal-output"></div>
+
+        <!-- Input -->
+        <div class="d-flex">
+            <span>C:\Users\kavit&gt;&nbsp;</span>
+            <input id="terminal-input" class="flex-grow-1 border-0 bg-black text-success"
+                   style="outline:none; color:#00ff00;" autocomplete="off">
+        </div>
+
+    </div>
+</div>
